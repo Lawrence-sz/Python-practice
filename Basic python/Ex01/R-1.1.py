@@ -6,10 +6,8 @@ integer i, and False otherwise.
 
 import string
 
-'''
-is_integer used to check if the input is a integer
 
-'''
+#is_integer used to check if the input is a integer
 def is_integer(var1):
 	for i in list(var1):
 		if i not in list(string.digits) + ['-']:
@@ -22,7 +20,6 @@ def is_integer(var1):
 		return True
 		
 	
-
 def is_multiple():
 
 	n = input("Enter the first integer number N:")
