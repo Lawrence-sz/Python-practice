@@ -1,1 +1,8 @@
 
+1. import math
+	import math module. And all functions in math that you use woould have to use like this:
+		math.pi, math.sqrt, etc.
+2. from math import *
+	import all functions from math. You can use functions in math like this:
+		pi, sqrt, etc.
+		
