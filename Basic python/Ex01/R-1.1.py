@@ -50,7 +50,7 @@ def is_multiple():
             print("M should not be zero!")
             m = input("Enter again! M:")
             if i == 1:
-                is_integer(m)
+                print("M should not be zero!")
                 print("You have tried for 3 times, we must quit this process!")
                 return False
         continue
