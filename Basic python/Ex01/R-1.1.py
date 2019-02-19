@@ -31,8 +31,7 @@ def is_multiple():
     for i in range(2):
         if not is_integer(n):
             n = input("Enter again! N:")
-            if i == 1:
-                is_integer(n)
+            if i == 1 and not is_integer(n):
                 print("You have tried for 3 times, we must quit this process!")
                 return False
         continue
@@ -42,14 +41,13 @@ def is_multiple():
     for i in range(2):
         if not is_integer(m):
             m = input("Enter again! M:")
-            if i == 1:
-                is_integer(m)
+            if i == 1 and not is_integer(m):
                 print("You have tried for 3 times, we must quit this process!")
                 return False
         elif list(m) == ['0']:
             print("M should not be zero!")
             m = input("Enter again! M:")
-            if i == 1:
+            if i == 1 and list(m) == ['0']:
                 print("M should not be zero!")
                 print("You have tried for 3 times, we must quit this process!")
                 return False
