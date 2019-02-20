@@ -17,7 +17,7 @@ def is_integer(var1):
 
     # Does it start with 0, or contain non-digits?
     if (tmp[0] == '0' and len(list(var1)) != 1) or not set(tmp) <= set(string.digits):
-        print(f"--'{var1}'-- is not an integer number,")
+        print(f"\t##--'{var1}'-- is not an integer number!")
         return False
 
     return True
@@ -27,7 +27,7 @@ def is_not_zero_divisor(var1):
 	""" Check if the given input is zero."""
 	tmp = list(var1) # Is it neended?
 	if tmp == ['0']:
-		print("Zero cannot be a divisor!")
+		print("\t##Zero cannot be a divisor!")
 		return False
 	return True
 
@@ -36,24 +36,25 @@ def is_not_zero_divisor(var1):
 
 def is_multiple():
     """ Check if the given first input is a multiple of the second given input."""
-    n = input("Enter the first integer number N:")
+    print("\t*This function is used to count if N is a multiple of M! \n \t* Please enter both N and M.")
+    n = input("\t##Enter the first integer number N:")
     # Give the user another two tries
 
     for i in range(2):
         if not is_integer(n):
-            n = input("Enter again! N:")
+            n = input("\t##Enter again! N:")
             if i == 1 and not is_integer(n):
-                print("You have tried for 3 times, we must quit this process!")
+                print("\t##You have tried for 3 times, we must quit this process!")
                 return False
         continue
 
-    m = input("Enter the second integer number M:")
+    m = input("\t##Enter the second integer number M:")
     # Give the user another two tries
     for i in range(2):
         if (not is_integer(m) or not is_not_zero_divisor(m)):
-            m = input("Enter again! M:")
-            if i == 1 and (not is_integer(n) or  not is_not_zero_divisor(m)):
-                print("You have tried for 3 times, we must quit this process!")
+            m = input("\t##Enter again! M:")
+            if i == 1 and (not is_integer(m) or  not is_not_zero_divisor(m)):
+                print("\t##You have tried for 3 times, we must quit this process!")
                 return False
         continue
 
@@ -61,11 +62,12 @@ def is_multiple():
     m = int(m)
 
     if n % m == 0:
-        print(f"--N: {n}-- is a multiple of --M: {m}--, and return: True")
+        print(f"\t##--N: {n}-- is a multiple of --M: {m}--, and return: True")
         return True
-    print(f"--N: {n}-- is NOT a multiple of --M: {m}--, and return: False")
+    print(f"\t##--N: {n}-- is NOT a multiple of --M: {m}--, and return: False")
     return False
 
 
 if __name__ == "__main__":
-	 is_multiple()
+	
+	is_multiple()
